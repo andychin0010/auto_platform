@@ -1,0 +1,1 @@
+var adminApp = ons.bootstrap('adminApp', ['onsen', 'adminControllers']);

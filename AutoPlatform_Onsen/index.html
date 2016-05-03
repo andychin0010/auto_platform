@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plugins/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="plugins/OnsenUI/css/onsenui.css"/>
+    <link rel="stylesheet" href="plugins/OnsenUI/css/onsen-css-components.css"/>
+    <style>
+      .prop-desc {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+
+      .prop-desc ons-icon {
+        font-size: 14px;
+        vertical-align: -0px;
+        opacity: 0.5;
+      }
+      .item {
+        border-top: none;
+        border-bottom: 1px solid #ddd;
+      }
+      .action-col {
+        text-align: center;
+        opacity: 0.4;
+        padding: 10px 0 8px;
+      }
+
+      .action-col:active {
+        opacity: 0.7;
+      }
+
+      .action-col ons-button {
+        padding: 0;
+        line-height: 1;
+      }
+
+      .action-icon {
+        padding: 0 0 4px 0;
+      }
+
+      .action-icon ons-icon {
+        font-size: 28px;
+      }
+
+      .action-label {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body ng-controller="autoController">
+    <ons-navigator title="Navigator" var="autoNavigator">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">CarPaPaPa</div>
+        </ons-toolbar>
+        <!-- <div style="text-align: center">
+          <br>
+          <ons-button modifier="light" ng-click="getDetail()">
+            Push Page
+          </ons-button>
+          <p>{{ test }}</p>
+        </div> -->
+
+        <!-- <ons-list>
+          <ons-list-item ons-lazy-repeat="MyDelegate">
+            {{ item }}
+          </ons-list-item>
+        </ons-list> -->
+        <div>
+          <div style="text-align: center; margin-top: 25px">
+            <ons-icon icon="ion-ios-settings-strong" style="font-size: 28px; margin: 10px 10px 0 0" fixed-width="false"></ons-icon>
+          </div>
+          <div style="position: relative;">
+            <div ons-lazy-repeat="autoDelegate">
+              <div style="text-align: center">
+                <div style="display: inline-block; background-color: white; border-style: solid; border-color: #DDDDDD; border-width: 1px; width: 90%; margin-top: 30px" ng-click="autoDetail()">
+                  <div style="padding-top: 20px">
+                     <!-- <img src="images/b5147a22-a32b-43de-9442-6c56059579a2.jpg" style="width: 350px">   -->
+                     <!-- <img ng-src="images/b5147a22-a32b-43de-9442-6c56059579a2.jpg" style="width: 350px" class="item-thum"></img> -->
+                     <img ng-src="{{ item.images[0].path }}" style="width: 350px" class="item-thum"></img>
+                  </div>
+                  <p>{{ item.make }}</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </ons-page>
+    </ons-navigator>
+
+    <script src="plugins/angular/angular.min.js"></script>
+    <script src="plugins/OnsenUI/js/onsenui.min.js"></script>
+    <script src="plugins/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <script src="js/config/autoConfig.js"></script>
+    <script src="js/controller/autoControllers.js"></script>
+    <script src="js/service/autoServices.js"></script>
+    <script src="js/service/productServices.js"></script>
+  </body>
+</html>

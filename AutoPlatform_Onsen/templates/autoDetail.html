@@ -1,0 +1,98 @@
+<ons-page ng-controller="autoDetailController">
+  <div>
+    <div style="position: fixed; z-index: 999; width: 100%;">
+      <div ng-click="prevPage()" style="float: left">
+        <div class="action-icon">
+          <ons-icon icon="ion-arrow-left-c" style="color: white; font-size: 28px; margin: 10px 0 0 10px" fixed-width="false"></ons-icon>
+        </div>
+      </div>
+      <div style="float: right">
+        <ons-icon icon="ion-ios-copy" style="color: white; font-size: 28px; margin: 10px 10px 0 0" fixed-width="false"></ons-icon>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <ons-carousel ng-style="myStyle" swipeable overscrollable auto-scroll auto-scroll-ratio="0.3" var="autoCarousel">
+      <ons-carousel-item style="background-color: gray;">
+        <img src="images/b5147a22-a32b-43de-9442-6c56059579a2.jpg" style="width: 100%">  
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #085078;">
+        <div class="item-label"></div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #373B44;">
+        <img src="images/b5147a22-a32b-43de-9442-6c56059579a2.jpg" style="width: 100%">  
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #D38312;">
+        <div class="item-label"></div>
+      </ons-carousel-item>
+      <ons-carousel-cover style="color: white; pointer-events: auto;">
+        <div style="float: left">
+          <div ng-style="myStyle" ng-click="prevCarousel()" style="display: table-cell; vertical-align: middle; padding-left: 20px;">
+            <ons-icon icon="fa-angle-left fa-3x"></ons-icon>
+          </div>
+        </div>
+        <div style="float: right">
+          <div ng-style="myStyle" ng-click="nextCarousel()" style="display: table-cell; vertical-align: middle; padding-right: 20px">
+            <ons-icon icon="fa-angle-right fa-3x"></ons-icon>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </ons-carousel-cover>
+    </ons-carousel>
+
+    <ons-list style="border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
+      <ons-row class="action">
+
+        <ons-col class="action-col">
+          <div class="action-icon"><ons-icon icon="ion-ios-star-half"></ons-icon></div>
+          <div class="action-label">Rate</div>
+        </ons-col>
+
+        <ons-col class="action-col">
+          <div class="action-icon"><ons-icon icon="ion-bookmark"></ons-icon></div>
+          <div class="action-label">Favorite</div>
+        </ons-col>
+
+        <ons-col class="action-col">
+          <div class="action-icon"><ons-icon icon="ion-share"></ons-icon></div>
+          <div class="action-label">Share</div>
+        </ons-col>
+
+        <ons-col class="action-col">
+          <div class="action-icon"><ons-icon icon="ion-compose"></ons-icon></div>
+          <div class="action-label">Check In</div>
+        </ons-col>
+
+      </ons-row>
+    </ons-list-item></ons-list>
+
+    <div style="margin-top: 12px; border-top: 1px solid #ddd; background-color: #FFF">
+      <div style="border-bottom: 1px solid #ddd;">
+        <div class="prop-desc" style="margin: 10px 10px">
+          <ons-icon icon="fa-car"></ons-icon>
+          <span style="margin-left: 10px">2-15-13 Hongo Bunkyo Tokyo</span>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #ddd;">
+        <div class="prop-desc" style="margin: 10px 10px">
+          <ons-icon icon="fa-calendar-o"></ons-icon>
+          <span style="margin-left: 10px">2011</span>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #ddd;">
+        <div class="prop-desc" style="margin: 10px 10px">
+          <ons-icon icon="fa-bar-chart-o"></ons-icon>
+          <span style="margin-left: 10px">Data</span>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #ddd;">
+        <div class="prop-desc" style="margin: 10px 10px">
+          <ons-icon icon="fa-file-text-o"></ons-icon>
+          <span style="margin-left: 10px">Description</span>
+        </div>
+      </div>
+    </div>
+</ons-page>

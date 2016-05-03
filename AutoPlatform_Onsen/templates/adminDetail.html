@@ -1,0 +1,53 @@
+<ons-page ng-controller="adminDetailController">
+  <div>
+    <ons-toolbar>
+      <div class="right"><ons-toolbar-button ng-click="prevPage()">Cancel</ons-toolbar-button></div>
+      <div class="center">{{ product.make }} {{ product.model }}</div>
+    </ons-toolbar>
+
+    <ons-carousel ng-style="myStyle" swipeable overscrollable auto-scroll auto-refresh auto-scroll-ratio="0.3" var="autoCarousel">
+      <ons-carousel-item ng-repeat="image in images" style="background-color: gray;">
+        <img ng-src="{{ image.path }}" style="width: 100%; height: 100%">
+      </ons-carousel-item>
+      <ons-carousel-cover style="color: white; pointer-events: auto;">
+        <div style="float: left">
+          <div ng-style="myStyle" ng-click="prevCarousel()" style="display: table-cell; vertical-align: middle; padding-left: 20px;">
+            <ons-icon icon="fa-angle-left fa-3x"></ons-icon>
+          </div>
+        </div>
+        <div style="float: right">
+          <div ng-style="myStyle" ng-click="nextCarousel()" style="display: table-cell; vertical-align: middle; padding-right: 20px">
+            <ons-icon icon="fa-angle-right fa-3x"></ons-icon>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </ons-carousel-cover>
+    </ons-carousel>
+
+    <ons-list modifier="inset" style="margin-top: 10px">
+      <ons-list-item>
+        <input ng-model="product.make" type="text" class="text-input text-input--transparent" style="width: 100%">
+      </ons-list-item>
+      <ons-list-item>
+        <input ng-model="product.model" ng-modeltype="text" class="text-input text-input--transparent" style="width: 100%">
+      </ons-list-item>
+      <ons-list-item>
+        <input ng-model="product.year" type="text" class="text-input text-input--transparent" style="width: 100%">
+      </ons-list-item>
+      <ons-list-item>
+        <input ng-model="product.mileage" type="text" class="text-input text-input--transparent" style="width: 100%">
+      </ons-list-item>
+      <ons-list-item>
+        <input ng-model="product.color" type="text" class="text-input text-input--transparent" style="width: 100%">
+      </ons-list-item>
+      <ons-list-item>
+        <textarea ng-model="product.description" class="textarea textarea--transparent" value="Description" style="width: 100%; height: 100px;"></textarea>
+      </ons-list-item>
+    </ons-list>
+
+    <div style="padding: 10px 9px">
+      <ons-button ng-click="update(product)" modifier="large" style="margin: 0 auto;">
+        Update
+      </ons-button>
+    </div>
+</ons-page>

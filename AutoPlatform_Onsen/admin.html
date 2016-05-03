@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plugins/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="plugins/OnsenUI/css/onsenui.css"/>
+    <link rel="stylesheet" href="plugins/OnsenUI/css/onsen-css-components.css"/>
+    <style>
+      .list-item-container {
+        line-height: 1;
+        padding: 15px 0px 15px 15px;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 80px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+      }
+
+      .name {
+        font-weight: 500;
+        line-height: 16px;
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      .location {
+        font-size: 14px;
+        opacity: 0.4;
+        margin-bottom: 6px;
+      }
+
+      .desc {
+        line-height: 1.2;
+        font-size: 13px;
+      }
+
+      .label {
+        display: inline-block;
+        padding: .2em .6em .3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+      }
+
+      .label-active {
+        background-color: green;
+      }
+
+      .label-default {
+        background-color: grey;
+      }
+
+      .login-form {
+        text-align: center;
+        width: 80%;
+        margin: 60px auto 0;
+      }
+
+      input[type=email], input[type=password] {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        outline: none;
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 16px;
+      }
+
+      .login-button {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .forgot-password {
+        display: block;
+        margin: 8px auto 0 auto;
+        font-size: 14px;
+      }
+
+
+      .page--menu-page__background {
+        background-color: #333;
+        color: white;
+      }
+
+      .menu-close,
+      .menu-close > .toolbar-button {
+        color: #999;
+      }
+
+      .menu-list,
+      .menu-item:first-child,
+      .menu-item {
+        background-color: transparent;
+        background-image: none !important;
+        border-color: transparent;
+        color: #fff;
+      }
+
+      .menu-item {
+        padding: 0 0 0 20px;
+        line-height: 52px;
+        height: 52px;
+        text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+      }
+
+      .menu-item:active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .menu-notification {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 14px;
+        height: 16px;
+        line-height: 16px;
+        min-width: 16px;
+        font-weight: 600;
+      }
+
+      .bottom-menu-list,
+      .bottom-menu-item:first-child,
+      .bottom-menu-item {
+        border-color: #393939;
+        background-color: transparent;
+        background-image: none !important;
+        color: #ccc;
+      }
+
+      .bottom-menu-item:active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body ng-controller="adminController">
+    <ons-navigator title="Navigator" var="autoNavigator">
+      
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Log In</div>
+          <div class="right"><ons-toolbar-button>Close</ons-toolbar-button></div>
+        </ons-toolbar>
+
+        <div class="login-form">
+          <input type="email" class="text-input--underbar" placeholder="Email" value="">
+          <input type="password" class="text-input--underbar" placeholder="Password" value="">
+          <br><br>
+          <ons-button ng-click="test()" modifier="large" class="login-button">Log In</ons-button>
+          <br><br>
+          <ons-button modifier="quiet" class="forgot-password">Forgot password?</ons-button>
+        </div>
+      </ons-page>
+    </ons-navigator>
+
+    <script src="plugins/angular/angular.min.js"></script>
+    <script src="plugins/OnsenUI/js/onsenui.min.js"></script>
+    <script src="plugins/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <script src="js/config/adminConfig.js"></script>
+    <script src="js/controller/adminControllers.js"></script>
+    <script src="js/service/adminServices.js"></script>
+    <script src="js/service/productServices.js"></script>
+    <script src="js/utils/page.js"></script>
+  </body>
+</html>
